@@ -8,12 +8,6 @@
 
 This repo gives an introduction to how to make full working example to serve your model using asynchronous Celery tasks and FastAPI. This post walks through a working example for serving a ML model using Celery and FastAPI. All code can be found in this repository. We won’t specifically discuss the ML model used for this example however it was trained using coco dataset with 90 object class like cat, dog, bird ... more detail here [Coco Dataset](https://cocodataset.org/#home). The model have been train with tensorflow [Tensorflow](https://github.com/tensorflow/models) 
 
-## Screenshots & Gifs
-
-**View System**
-
-[![Architecture](public/architecture.png)
-
 
 ## Contents
 - [Screenshots & Gifs](#screenshots--gifs)
@@ -22,6 +16,13 @@ This repo gives an introduction to how to make full working example to serve you
     - [2. Pull git repo](#2-pull-git-repo)
     - [3. Start Server](#3-start-server)
 - [Contact Us](#contact-us)
+
+
+## Screenshots & Gifs
+
+**View System**
+
+![Architecture](public/architecture.png)
 
 
 ## Demo
@@ -41,7 +42,6 @@ This repo gives an introduction to how to make full working example to serve you
 | API docs              | http://localhost:8081/api/docs   |
 | Demo Web              | http://localhost                 | 
 
-[![Demo](public/demo.png)
 
 
 ## Contact Us
