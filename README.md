@@ -44,7 +44,7 @@ This repo gives an introduction to how to make full working example to serve you
 
 go to Demo web ```http://localhost``` and test with your picture.
 
-![Test](public/demo.png)
+![Test](public/test.png)
 
 ## Contact Us
 - Email-1: duynnguyenngoc@hotmail.com - Duy Nguyen :heart: :heart: :heart: 
