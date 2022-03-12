@@ -15,7 +15,7 @@ from securities import token as token_helper
 from helpers import time as time_helper
 from settings import config
 from api.entities.object_detection import MlTimeHandle, MlResult, MlStatusHandle, MlResponse
-from api.resources.v1.object_detection.backgroud import image_upload_backgroud
+from api.resources.v1.object_detection.background import image_upload_background
 
 
 router = APIRouter()
@@ -36,7 +36,7 @@ async def ml_process(
     status_hanlde = MlStatusHandle().__dict__
     data = MlResult(task_id=task_id, time=time_handle, status=status_hanlde)
     redis.set(task_id, json.dumps(data.__dict__))
-    background_tasks.add_task(image_upload_backgroud, file, task_id, time, data)
+    background_tasks.add_task(image_upload_background, file, task_id, time, data)
     return MlResponse(status="PENDING", time=time, status_code=HTTP_200_OK, task_id=task_id)
 
 

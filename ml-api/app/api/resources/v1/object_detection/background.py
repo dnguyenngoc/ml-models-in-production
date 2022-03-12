@@ -9,7 +9,7 @@ from helpers.storage import upload_file_bytes, create_path
 from mq_main import redis, celery_execute
 
 
-def image_upload_backgroud(file: UploadFile, 
+def image_upload_background(file: UploadFile, 
                            task_id: str, 
                            time: datetime,
                            data: MlResult):
