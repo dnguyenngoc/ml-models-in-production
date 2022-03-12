@@ -6,17 +6,14 @@ from typing import Optional
 class MlTimeHandle(BaseModel):
     start_upload: str = None
     end_upload: str = None
-    start_paragraph: str = None
-    end_paragraph: str = None
-    start_field: str = None
-    end_field: str = None
+    start_detection: str = None
+    end_detection: str = None
 
 
 class MlStatusHandle(BaseModel):
     general_status: str = "PENDING"
     upload_status: str = "PENDING"
-    paragraph_status: str = None
-    field_status: str = None
+    detection_status: str = None
 
 
 class MlResult(BaseModel):
@@ -24,9 +21,9 @@ class MlResult(BaseModel):
     status: dict = None
     time: dict = None
     upload_result: dict = None
-    paragraph_result: dict = None
-    field_result: dict = None
+    detection_result: dict = None
     error: Optional[str] = None
+    
     
 class MlResponse(BaseModel):
     status: str = "PENDING"

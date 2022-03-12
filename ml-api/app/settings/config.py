@@ -87,13 +87,11 @@ BROKER = "amqp://{user}:{pw}@{hostname}:{port}/{vhost}".format(
 #=========================================================================
 #                          ML INFORMATION 
 #=========================================================================
-# ML = cfg['ml']
-# ML_IMAGE_TYPE = ML['image_type']
-# ML_STORAGE_PATH = ML['storage_path']
-# ML_STORAGE_UPLOAD_PATH = ML['storage_upload_path']
-# ML_STORAGE_PARAGRAPH_PATH = ML['storage_paragraph_path']
-# ML_STORAGE_FIELD_PATH = ML['storage_field_path']
-# ML_PROCESS_TAKS_NAME = ML['process_task_name']
-# ML_QUERY_NAME = ML['query_name']
+ML = cfg['ml']
+ML_IMAGE_TYPE = ML['image_type']
+ML_STORAGE_PATH = ML['storage_path']
+ML_STORAGE_UPLOAD_PATH = ML['storage_upload_path']
+ML_OBJECT_DETECTION_TASK = ML['object_detection_task']
+ML_QUERY_NAME = ML['query_name']
 
 

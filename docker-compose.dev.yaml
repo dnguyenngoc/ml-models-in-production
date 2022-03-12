@@ -44,7 +44,7 @@ services:
     volumes:
       - ./ml-api/app:/app/
       - ./ml-storages:/storages/
-      - api-logs:/logs/
+      - ./api-logs:/logs/
     ports:
      - 8081:8081
     networks:
@@ -61,7 +61,7 @@ services:
     volumes:
       - ./ml-celery/app:/app/
       - ./ml-storages:/storages/
-      - celery-logs:/logs/
+      - ./celery-logs:/logs/
     networks:
       - mlnet
 
@@ -72,5 +72,3 @@ volumes:
   redis-data:
   rabbitmq-data:
   rabbitmq-logs:
-  celery-logs:
-  api-logs:

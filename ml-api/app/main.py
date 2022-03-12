@@ -26,7 +26,7 @@ app = FastAPI(title=config.PROJECT_NAME, openapi_url="/api/openapi.json", docs_u
 
 # ++++++++++++++++++++++++++++++++++++++++++++ HANDLE LOG FILE +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-handler = TimedRotatingFileHandler('logs/{}-{}-{}_{}h-00p-00.log'.format(
+handler = TimedRotatingFileHandler('/logs/{}-{}-{}_{}h-00p-00.log'.format(
     config.u.year, config.u.month, config.u.day , config.u.hour), when="midnight", interval=1, encoding='utf8')
 handler.suffix = "%Y-%m-%d"
 handler.setFormatter(formatter)

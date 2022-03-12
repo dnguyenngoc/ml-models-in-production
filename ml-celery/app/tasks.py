@@ -52,7 +52,7 @@ class PredictTask(Task):
           name="{query}.{task_name}".format(
               query=celery_config.QUERY_NAME, 
               task_name=celery_config.ML_OBJECT_DETECTION_TASK_NAME))
-def object_detection(self, task_id: str, data: bytes):
+def object_detection_task(self, task_id: str, data: bytes):
     """_summary_: object_detection by efi d2 model
 
     Args:
@@ -62,4 +62,4 @@ def object_detection(self, task_id: str, data: bytes):
     Returns:
         _type_: _description_
     """
-    print(data)
+    logging.info(task_id)

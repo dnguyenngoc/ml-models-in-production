@@ -1,25 +1,19 @@
 # core
 __pycache__
+api-logs
+celery-logs
 
 
 # Celery
-ml-celery/app/logs/*
 ml-celery/app/worker/ml/models/*
-ml-celery/app/storages/*
-
-!ml-celery/app/logs/.gitkeep
 !ml-celery/app/worker/ml/models/.gitkeep
-!ml-celery/app/storages/.gitkeep
 
+# Storage
+ml-storages/upload/*
+ml-storages/objec_detection/*
+!ml-storages/upload/.gitkeep
+!ml-storages/objec_detection/.gitkeep
 
-
-
-# Api
-ml-api/app/logs/*
-ml-api/app/storages/*
-
-!ml-api/app/logs/.gitkeep
-!ml-api/app/storages/.gitkeep
 
 
 
