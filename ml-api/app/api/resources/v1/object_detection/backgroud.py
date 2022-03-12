@@ -26,7 +26,7 @@ def image_upload_backgroud(file: UploadFile,
         data.upload_result = {"path": file_path, "file_type": config.ML_IMAGE_TYPE} 
         data_dump = json.dumps(data.__dict__)
         redis.set(task_id, data_dump)
-        print(config.ML_QUERY_NAME, config.ML_OBJECT_DETECTION_TASK)
+        # print(config.ML_QUERY_NAME, config.ML_OBJECT_DETECTION_TASK)
         celery_execute.send_task(
             name="{}.{}".format(config.ML_QUERY_NAME, config.ML_OBJECT_DETECTION_TASK),
             kwargs={

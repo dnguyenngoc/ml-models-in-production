@@ -21,7 +21,7 @@ class MlResult(BaseModel):
     status: dict = None
     time: dict = None
     upload_result: dict = None
-    detection_result: dict = None
+    detection_result: list = None
     error: Optional[str] = None
     
     

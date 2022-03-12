@@ -62,4 +62,39 @@ def object_detection_task(self, task_id: str, data: bytes):
     Returns:
         _type_: _description_
     """
-    logging.info(task_id)
+    data = json.loads(data) # load session data
+    time = time_helper.now_utc()
+    data['time']['start_detection'] = str(time_helper.now_utc().timestamp())
+    string_time = time_helper.str_yyyy_mm_dd(time)
+    try:
+        image = ml_image_helper.read_image_from_path_to_numpy(data['upload_result']['path'])
+        draw_image = image.copy()
+        height, width = image.shape[0:2]
+        detections, category_index = self.model.detect(image)
+        detection_boxes = detections['detection_boxes']
+        detection_scores = detections['detection_scores']
+        detection_classes = detections['detection_classes']
+        det_new = []
+        for j in range(len(detection_boxes)):
+            box = detection_boxes[j]
+            ymin, xmin, ymax, xmax = int(box[0]*height), int(box[1]*width), int(box[2]*height), int(box[3]*width)
+            obj = {}
+            obj['confidence_level'] = str(detection_scores[j])
+            obj['box'] = ",".join([str(xmin), str(ymin), str(xmax), str(ymax)])
+            obj['class_name'] = category_index[detection_classes[j]]['name']
+            det_new.append(obj)
+        print(det_new)
+        data['time']['end_detection'] = str(time_helper.now_utc().timestamp())
+        data['status']['detection_status'] = "SUCCESS"
+        if len(det_new) > 0:
+            data['detection_result'] = det_new
+        data_dump = json.dumps(data)
+        redis.set(task_id, data_dump) 
+    except Exception as e:
+        data['time']['end_detection'] = str(time_helper.now_utc().timestamp())
+        data['status']['detection_status'] = "FAILED"
+        data['status']['general_status'] = "FAILED"
+        data['error'] = str(e)
+        data_dump = json.dumps(data)
+        redis.set(task_id, data_dump)
+        

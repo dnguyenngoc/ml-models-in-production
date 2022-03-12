@@ -5,8 +5,8 @@ celery-logs
 
 
 # Celery
-ml-celery/app/worker/ml/models/*
-!ml-celery/app/worker/ml/models/.gitkeep
+# ml-celery/app/worker/ml/models/*
+# !ml-celery/app/worker/ml/models/.gitkeep
 
 # Storage
 ml-storages/upload/*
