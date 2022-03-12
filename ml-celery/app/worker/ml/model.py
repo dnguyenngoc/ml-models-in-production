@@ -1,7 +1,6 @@
 """
     @Author by Duy Nguyen Ngoc 
     @email: duynguyenngoc@hotmail.com
-    @company-email: duynn_1@digi-texx.vn
     @Date: 2021-09-15
     @Update-1: 2022-02-10 add non_max_suppression
 """
