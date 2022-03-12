@@ -42,7 +42,9 @@ This repo gives an introduction to how to make full working example to serve you
 | API docs              | http://localhost:8081/api/docs   |
 | Demo Web              | http://localhost                 | 
 
+go to Demo web ```http://localhost``` and test with your picture.
 
+![Test](public/demo.png)
 
 ## Contact Us
 - Email-1: duynnguyenngoc@hotmail.com - Duy Nguyen :heart: :heart: :heart: 
