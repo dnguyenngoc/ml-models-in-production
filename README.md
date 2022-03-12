@@ -20,7 +20,7 @@ This repo gives an introduction to how to make full working example to serve you
 - [Demo](#demo)
     - [1. Install docker, docker-compose](#1-install-docker-and-docker-compose)
     - [2. Pull git repo](#2-pull-git-repo)
-    - [3. Start Server](3-start-server)
+    - [3. Start Server](#3-start-server)
 - [Contact Us](#contact-us)
 
 
@@ -40,6 +40,8 @@ This repo gives an introduction to how to make full working example to serve you
 | :-------------------: | :------------------------------: | 
 | API docs              | http://localhost:8081/api/docs   |
 | Demo Web              | http://localhost                 | 
+
+[![Demo](public/demo.png)
 
 
 ## Contact Us
