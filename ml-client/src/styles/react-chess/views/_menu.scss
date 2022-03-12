@@ -1,0 +1,90 @@
+.menu-wrapper {
+    display: block;
+    flex: 0 0 200px;
+    max-width: 200px;
+    min-width: 200px;
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    background-color: #00152A;
+    .menu-header {
+        display: block;
+        border-bottom: solid 1px #fff;
+        padding-bottom: 20px;
+        .menu-header-room-text {
+            color: #1890ff;
+            margin-right: 5px;
+        }
+        .menu-header-room-id {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            padding-top:5px;
+            padding-bottom:5px;
+            color: #f5222d;
+            border-radius: 5px;
+            background-color: #fff;
+            display: inline-block;
+            overflow-wrap: break-word;
+            width: 100%;
+            
+        }
+    }
+    .menu-content {
+        margin-top: 12px;
+        .menu-content-item {
+            font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            position: relative;
+            display: inline-block;
+            padding: 2px 0px;
+            width: 100%;
+            height: 32px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: rgba(172, 59, 59, 0.65);
+            background-color: #fff;
+            border: none !important;
+            border-radius: 4px;
+            outline-width: 0 !important;
+            outline: none !important;
+        }
+        .menu-content-join-btn {
+            margin-top: 10px;
+            display: block;
+            float: right;
+            line-height: 1.5;
+            font-weight: 500;
+            text-align: center;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            white-space: nowrap;
+            padding: 0 15px;
+            font-size: 14px;
+            border-radius: 4px;
+            height: 26px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-transition: all .3s cubic-bezier(.645,.045,.355,1);
+            -o-transition: all .3s cubic-bezier(.645,.045,.355,1);
+            transition: all .3s cubic-bezier(.645,.045,.355,1);
+            position: relative;
+            color: #ffffff;;
+            background-color: rgb(65, 126, 206);
+            border-color: rgb(65, 126, 206);
+        }
+    }
+  }
+  
+
+  
+
+
+
+  
+
+  

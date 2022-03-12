@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("assets/triangleBackground.png");
+    background-size: cover;
+    
+  }
+  #root {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .form-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #mainForm {
+    width: 40%;
+    height: 60%;
+  }

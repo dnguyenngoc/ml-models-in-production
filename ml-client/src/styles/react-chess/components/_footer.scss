@@ -1,0 +1,41 @@
+.footer{
+    padding-top: 4rem;
+    display: flex;
+    float: center;
+    font-family: Graphik,sans-serif;
+    // text-align: center;
+    height: 100px;
+    width: 100%;
+
+    
+
+    .footer-content{
+        h3{
+            font-size: 13px;
+            font-weight: bolder;
+        }
+        p{
+            font-size: 13px;
+            font-weight:lighter;
+        }
+        .footer-content-contact{
+            display: grid;
+        }
+        .footer-content-link{
+            display: grid;
+        }
+        display: block;
+        padding-right: 20px;
+        max-width: 450px;
+        line-break: auto;
+        width: 20%;
+        height: 100%;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+
+    }
+    
+}

@@ -1,0 +1,13 @@
+.avatar {
+    position:absolute;
+    z-index: 300;
+    right:0;
+    top:0;
+    padding-top: 10px;
+    padding-right: 30px;
+    .image{
+        width: 50px;
+        height: auto;
+        border-radius: 50%;
+    }
+}

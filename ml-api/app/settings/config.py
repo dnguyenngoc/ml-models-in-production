@@ -27,6 +27,7 @@ PASSWORD = PROJECT['password']
 
 NGINX = cfg['nginx']
 NGINX_HOST = NGINX['host']
+FE_PORT = 3000
 
 
 

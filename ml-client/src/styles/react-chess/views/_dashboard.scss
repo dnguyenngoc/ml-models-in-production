@@ -1,0 +1,33 @@
+.dashboard{
+    margin: 0 auto;
+    display: block;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    .col-one{
+        margin: 30px auto;
+        display: flex;
+        align-items: center;
+        .item{
+            height: 600px;
+            width: 730px ;
+            box-shadow: rgba(143, 168, 191, 0.35) 0px 8px 20px 0px;
+            margin-top: 40px; 
+            margin-left: 60px;
+            padding-bottom: -10px;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            .item-box{
+                .image{
+                    margin: 5px auto;
+                    background-color: black;
+                    width: 670px;
+                    min-height: 500px;
+                    height:  auto;
+                }
+            }
+        }
+    }
+    
+    
+}

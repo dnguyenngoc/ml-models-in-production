@@ -14,7 +14,8 @@ ml-storages/object_detection/*
 !ml-storages/upload/.gitkeep
 !ml-storages/object_detection/.gitkeep
 
-
+# frontend and socket
+node_modules
 
 
 

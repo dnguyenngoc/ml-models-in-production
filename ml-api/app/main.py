@@ -42,6 +42,7 @@ app.include_router(router_v1, prefix="/api/v1")
 # ++++++++++++++++++++++++++++++++++++++++++++ CORS MIDDLEWARE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 origins = [
     "http://{host}:{port}".format(host=config.HOST, port=config.PORT),
+    "http://{host}:{port}".format(host=config.HOST, port=config.FE_PORT),
     "http://{host}".format(host=config.NGINX_HOST),
 ]
 
