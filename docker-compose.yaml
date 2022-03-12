@@ -1,0 +1,71 @@
+version: '3.8'
+
+
+
+services:
+
+  # Redis
+  redis:
+    image: redis
+    restart: unless-stopped
+    command: redis-server --requirepass password
+    volumes:
+      - redis-data:/data
+    ports:
+     - 6379:6379
+    networks:
+     - mlnet
+
+  # Rabbitmq   
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+        - 5672:5672
+        - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest 
+      - RABBITMQ_DEFAULT_PASS=guest
+    volumes:
+        - rabbitmq-data:/var/lib/rabbitmq/
+        - rabbitmq-logs:/var/log/rabbitmq
+    networks:
+        - mlnet
+
+  # API    
+  ml-api:
+    build:
+      context: ./ml-api
+      dockerfile: ./Dockerfile
+    container_name: ml-api
+    restart: unless-stopped
+    command: sh -c "uvicorn main:app --host 0.0.0.0 --port 8081"
+    volumes:
+      - ./ml-api/app/:/app/
+      - storages:/app/storages
+    ports:
+     - 8081:8081
+    networks:
+     - mlnet
+
+  # ml-celery:
+  #   build: 
+  #     context: ./app_paragraph
+  #     dockerfile: ./Dockerfile
+  #   container_name: ml-celery
+  #   restart: unless-stopped
+  #   command: sh -c "celery -A tasks worker --loglevel=info --concurrency=1 -E --logfile=logs/celery.log"
+  #   volumes:
+  #     - ./app_paragraph/app/:/app/
+  #     - storages:/app/storages
+  #   networks:
+  #     - mlnet
+
+networks:
+  mlnet:
+
+volumes:
+  storages:
+  redis-data:
+  rabbitmq-data:
+  rabbitmq-logs:
