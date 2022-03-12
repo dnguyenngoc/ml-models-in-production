@@ -1,0 +1,14 @@
+# fastapi
+psycopg2-binary==2.8.6
+celery==5.1.2
+flower==1.0.0
+redis==3.5.3
+SQLAlchemy==1.4.23
+starlette==0.16.0
+
+# Tensorflow
+tensorflow==2.7.0
+pillow==8.3.2
+opencv-python==4.5.3.56
+matplotlib
+

@@ -27,10 +27,10 @@ services:
       - RABBITMQ_DEFAULT_USER=guest 
       - RABBITMQ_DEFAULT_PASS=guest
     volumes:
-        - rabbitmq-data:/var/lib/rabbitmq/
-        - rabbitmq-logs:/var/log/rabbitmq
+      - rabbitmq-data:/var/lib/rabbitmq/
+      - rabbitmq-logs:/var/log/rabbitmq
     networks:
-        - mlnet
+      - mlnet
 
   # API    
   ml-api:
@@ -48,18 +48,18 @@ services:
     networks:
      - mlnet
 
-  # ml-celery:
-  #   build: 
-  #     context: ./app_paragraph
-  #     dockerfile: ./Dockerfile
-  #   container_name: ml-celery
-  #   restart: unless-stopped
-  #   command: sh -c "celery -A tasks worker --loglevel=info --concurrency=1 -E --logfile=logs/celery.log"
-  #   volumes:
-  #     - ./app_paragraph/app/:/app/
-  #     - storages:/app/storages
-  #   networks:
-  #     - mlnet
+  ml-celery:
+    build: 
+      context: ./ml-celery
+      dockerfile: ./Dockerfile
+    container_name: ml-celery
+    restart: unless-stopped
+    command: sh -c "celery -A tasks worker --loglevel=info --concurrency=1 -E --logfile=logs/celery.log"
+    volumes:
+      - ./ml-celery/app/:/app/
+      - storages:/app/storages
+    networks:
+      - mlnet
 
 networks:
   mlnet:

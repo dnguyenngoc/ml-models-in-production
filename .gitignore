@@ -1,0 +1,26 @@
+# core
+__pycache__
+
+
+# Celery
+ml-celery/app/logs/*
+ml-celery/app/worker/ml/models/*
+ml-celery/app/storages/*
+
+!ml-celery/app/logs/.gitkeep
+!ml-celery/app/worker/ml/models/.gitkeep
+!ml-celery/app/storages/.gitkeep
+
+
+
+
+# Api
+ml-api/app/logs/*
+ml-api/app/storages/*
+
+!ml-api/app/logs/.gitkeep
+!ml-api/app/storages/.gitkeep
+
+
+
+
