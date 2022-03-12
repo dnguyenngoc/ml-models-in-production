@@ -13,6 +13,12 @@ cfg.read('./environment.ini')
 u = datetime.datetime.utcnow()
 u = u.replace(tzinfo=pytz.timezone("Asia/Ho_Chi_Minh"))
 
+#=========================================================================
+#                          PROJECT INFORMATION 
+#=========================================================================
+PROJECT = cfg['project']
+BE_HOST = PROJECT['be_host']
+BE_PORT = PROJECT['be_port']
 
 #=========================================================================
 #                          REDIS INFORMATION 

@@ -24,7 +24,7 @@ router = APIRouter()
 @router.post("/process")
 async def ml_process(
     *,
-    current_user = Depends(token_helper.get_current_user),
+    # current_user = Depends(token_helper.get_current_user),
     file: UploadFile = File(...),
     background_tasks: BackgroundTasks
 ):
@@ -44,7 +44,7 @@ async def ml_process(
 def ml_status(
     *,
     task_id: str,
-    current_user = Depends(token_helper.get_current_user),
+    # current_user = Depends(token_helper.get_current_user),
 ):
     data = redis.get(task_id)
     if data == None:

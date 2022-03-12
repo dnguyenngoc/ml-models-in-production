@@ -89,7 +89,8 @@ def object_detection_task(self, task_id: str, data: bytes):
             det_new.append(obj)
             image_draw = cv2.rectangle(image_draw, (xmin, ymin), (xmax, ymax), box_color, 1)
             cv2.putText(image_draw, obj['class_name'], (xmin+5, ymin+20), cv2.FONT_HERSHEY_SIMPLEX, 0.9, class_name_color, 2)
-        data['detection_draw_url'] = celery_config.ML_STORAGE_OBJECT_DETECTION_PATH + string_time + '/' + str(task_id) + celery_config.ML_IMAGE_TYPE
+        data['detection_draw_url'] = "http://{}:{}/api/v1/show-image/?path_image=".format(config.BE_HOST, config.BE_PORT) \
+            + celery_config.ML_STORAGE_OBJECT_DETECTION_PATH + string_time + '/' + str(task_id) + celery_config.ML_IMAGE_TYPE
         create_path(celery_config.ML_STORAGE_OBJECT_DETECTION_PATH + string_time)
         cv2.imwrite(celery_config.ML_STORAGE_OBJECT_DETECTION_PATH + string_time + '/' + str(task_id) + celery_config.ML_IMAGE_TYPE, image_draw)
         data['time']['end_detection'] = str(time_helper.now_utc().timestamp())
