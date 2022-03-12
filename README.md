@@ -4,13 +4,10 @@
 [![Rabbitmq](https://img.shields.io/badge/rabbitmq-3-orange)](https://www.rabbitmq.com/)
 [![Redis](https://img.shields.io/badge/redis-6.2.6-orange)](https://redis.io/)
 [![react](https://img.shields.io/badge/react-17.0.2-lightgrey)](https://reactjs.org/)
-[!]
 
 This repo gives an introduction to how to make full working example to serve your model using asynchronous Celery tasks and FastAPI. This post walks through a working example for serving a ML model using Celery and FastAPI. All code can be found in this repository. We won’t specifically discuss the ML model used for this example however it was trained using coco dataset with 90 object class like cat, dog, bird ... more detail here [Coco Dataset](https://cocodataset.org/#home). The model have been train with tensorflow [Tensorflow](https://github.com/tensorflow/models) 
 
 ## Screenshots & Gifs
-
-**View System**
 [![Architecture](public/architecture.png)
 
 
