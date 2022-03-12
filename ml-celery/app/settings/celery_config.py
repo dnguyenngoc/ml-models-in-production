@@ -30,7 +30,7 @@ result_expires = 60 * 60 * 48  # 48 hours in seconds
 # #                          ML INFORMATION 
 # #=========================================================================
 ML_OBJECT_DETECTION_TASK_NAME = CELERY['object_detection_task']
-# ML_STORAGE_PATH = CELERY['storage_path']
-# ML_STORAGE_UPLOAD_PATH = CELERY['storage_upload_path']
-# ML_STORAGE_PARAGRAPH_PATH = CELERY['storage_paragraph_path']
-# ML_STORAGE_FIELD_PATH = CELERY['storage_field_path']
+ML_STORAGE_PATH = CELERY['storage_path']
+ML_STORAGE_UPLOAD_PATH = CELERY['storage_upload_path']
+ML_STORAGE_OBJECT_DETECTION_PATH = CELERY['storage_object_detection_path']
+ML_IMAGE_TYPE = CELERY['image_type']

@@ -10,9 +10,9 @@ celery-logs
 
 # Storage
 ml-storages/upload/*
-ml-storages/objec_detection/*
+ml-storages/object_detection/*
 !ml-storages/upload/.gitkeep
-!ml-storages/objec_detection/.gitkeep
+!ml-storages/object_detection/.gitkeep
 
 
 
