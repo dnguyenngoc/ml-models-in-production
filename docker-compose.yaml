@@ -48,6 +48,7 @@ services:
     networks:
      - mlnet
 
+  # Celery object detection
   ml-celery:
     build: 
       context: ./ml-celery
