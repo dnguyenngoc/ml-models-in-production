@@ -26,7 +26,7 @@ export default function isAuth(){
         console.log("refreshToken not expire yet!", expireFreshToken)
         axios({
         method: "post",
-        url: BASE_URL + "account/login/refresh-token",
+        url: BASE_URL + "/account/login/refresh-token",
         data: bodyFreshToken,
         headers: { "Content-Type": "multipart/form-data" },
         }).then(function (response) {

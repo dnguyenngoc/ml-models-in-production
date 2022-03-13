@@ -97,6 +97,7 @@ def object_detection_task(self, task_id: str, data: bytes):
         data['status']['detection_status'] = "SUCCESS"
         if len(det_new) > 0:
             data['detection_result'] = det_new
+        data['status']['general_status'] = "SUCCESS"
         data_dump = json.dumps(data)
         redis.set(task_id, data_dump) 
     except Exception as e:

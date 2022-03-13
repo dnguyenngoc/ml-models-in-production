@@ -1,5 +1,6 @@
 .dashboard{
     margin: 0 auto;
+    padding-left: 2rem;
     display: block;
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -9,7 +10,7 @@
         align-items: center;
         .item{
             height: 600px;
-            width: 730px ;
+            width: 720px ;
             box-shadow: rgba(143, 168, 191, 0.35) 0px 8px 20px 0px;
             margin-top: 40px; 
             margin-left: 60px;
@@ -19,11 +20,22 @@
             padding-right: 10px;
             .item-box{
                 .image{
+                    img{
+                        max-height: 480px;
+                        max-width: 600px;
+                    }
                     margin: 5px auto;
-                    background-color: black;
+                    // background-color: black;
                     width: 670px;
                     min-height: 500px;
                     height:  auto;
+                }
+                .title{
+                    display: inline-flex;
+                    h1{
+                        padding-left: 20px;
+                        padding-right: 30px;
+                    }
                 }
             }
         }
