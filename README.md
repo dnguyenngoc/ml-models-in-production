@@ -9,7 +9,7 @@
 [![Tensorflow](https://img.shields.io/badge/tensorflow-3.7-yellowgreen)](https://analyticsindiamag.com/tensorflow-2-7-0-released-all-major-updates-features/)
 
 
-This repo gives an introduction to how to make full working example to serve your model using asynchronous Celery tasks and FastAPI. This post walks through a working example for serving a ML model using Celery and FastAPI. All code can be found in this repository. We won’t specifically discuss the ML model used for this example however it was trained using coco dataset with 90 object class like cat, dog, bird ... more detail here [Coco Dataset](https://cocodataset.org/#home). The model have been train with tensorflow [Tensorflow](https://github.com/tensorflow/models) 
+This repo gives an introduction to how to make full working example to serve your model using asynchronous Celery tasks and FastAPI. This post walks through a working example for serving a ML model using Celery and FastAPI. All code can be found in this repository. We won’t specifically discuss the ML model used for this example however it was trained using coco dataset with 80 object class like cat, dog, bird ... more detail here [Coco Dataset](https://cocodataset.org/#home). The model have been train with tensorflow [Tensorflow](https://github.com/tensorflow/models) 
 
 
 ## Contents
@@ -38,11 +38,11 @@ This repo gives an introduction to how to make full working example to serve you
 `git clone https://github.com/apot-group/ml-models-in-production.git` 
 
 ### 3. Start Server
-`cd ml-models-in-production && docker-compose -f docker-compose.dev.yaml up`
+`cd ml-models-in-production && docker-compose up`
 
 | Service               | URL                              | 
 | :-------------------: | :------------------------------: | 
-| API docs              | http://localhost:8081/api/docs   |
+| API docs              | http://localhost/api/docs        |
 | Demo Web              | http://localhost                 | 
 
 go to Demo web ```http://localhost``` and test with your picture.

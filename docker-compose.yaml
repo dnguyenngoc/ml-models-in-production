@@ -33,14 +33,11 @@ services:
 
   # API    
   ml-api:
-    build:
-      context: ./ml-api
-      dockerfile: ./Dockerfile
+    image: duynguyenngoc/mmip-api:0.0.1
     container_name: ml-api
     restart: unless-stopped
     command: sh -c "uvicorn main:app --host 0.0.0.0 --port 8081 --reload"
     volumes:
-      - ./ml-api/app:/app/
       - ./ml-storages:/storages/
       - api-logs:/logs/
     ports:
@@ -50,23 +47,19 @@ services:
 
   # Celery object detection
   ml-celery:
-    build: 
-      context: ./ml-celery
-      dockerfile: ./Dockerfile
+    image: duynguyenngoc/mmip-celery:0.0.1
     container_name: ml-celery
     restart: unless-stopped
     command: sh -c "celery -A tasks worker --loglevel=info --concurrency=1 -E --logfile=/logs/celery.log"
     volumes:
-      - ./ml-celery/app:/app/
       - ./ml-storages:/storages/
       - celery-logs:/logs/
     networks:
       - mlnet
 
+  # Client demo
   ml-client:
-    build:
-      context: ./ml-client
-      dockerfile: ./Dockerfile
+    image: duynguyenngoc/mmip-client:0.0.1
     environment:
       DOMAIN: localhost
       BE_HOST: ml-api
