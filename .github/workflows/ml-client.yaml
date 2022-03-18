@@ -1,4 +1,4 @@
-name: DEPLOY_AIRFLOW
+name: DEPLOY_CLIENT
 on:
   pull_request:
     types: [closed]

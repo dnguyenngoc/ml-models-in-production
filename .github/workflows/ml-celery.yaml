@@ -1,4 +1,4 @@
-name: DEPLOY_SPARK
+name: DEPLOY_CELERY
 on:
   pull_request:
     types: [closed]

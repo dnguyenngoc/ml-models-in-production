@@ -1,4 +1,4 @@
-name: DEPLOY_JUPYTER
+name: DEPLOY_API
 on:
   pull_request:
     types: [closed]
