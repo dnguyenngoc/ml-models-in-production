@@ -1,5 +1,7 @@
 FROM node:14.17-alpine3.13 as builder
 
+LABEL maintainer="Duy Nguyen <duynguyenngoc@hotmail.com>"
+
 WORKDIR /app
 
 ENV PATH /app/node_modules/.bin:$PATH
