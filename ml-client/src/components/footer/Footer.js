@@ -9,13 +9,6 @@ import Hotmail from '../../assets/images/dashboard/hotmail.png'
 import Gmail from '../../assets/images/dashboard/gmail.png'
 
 
-
-
-
-
-
-
-
 const Footer = (props) => {
     return(
         <>
@@ -36,7 +29,7 @@ const Footer = (props) => {
                 <h3>Contact</h3>
                 <div className= 'footer-content-contact'>
                     <div className='fcl-item'>
-                        <a href='tel:+31202256153'>
+                        <a href='tel:+84399360638'>
                             <img className="fcli-image" src={Mobile} alt=""></img>
                             +84 399 360 638
                         </a>
@@ -59,7 +52,7 @@ const Footer = (props) => {
                 <h3>More Info</h3>
                 <div className="footer-content-link">
                     <div className='fcl-item'>
-                        <a href = 'https://github.com/apot-group'>
+                        <a href = 'https://github.com/dnguyenngoc'>
                             <img className="fcli-image" src={Github} alt=""></img>
                             Github
                         </a>
