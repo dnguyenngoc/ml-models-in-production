@@ -33,7 +33,7 @@ services:
 
   # API    
   ml-api:
-    image: duynguyenngoc/mmip-api:0.0.1
+    image: duynguyenngoc/mmip-api:latest
     container_name: ml-api
     restart: unless-stopped
     command: sh -c "uvicorn main:app --host 0.0.0.0 --port 8081 --reload"
@@ -47,7 +47,7 @@ services:
 
   # Celery object detection
   ml-celery:
-    image: duynguyenngoc/mmip-celery:0.0.1
+    image: duynguyenngoc/mmip-celery:latest
     container_name: ml-celery
     restart: unless-stopped
     command: sh -c "celery -A tasks worker --loglevel=info --concurrency=1 -E --logfile=/logs/celery.log"
@@ -59,7 +59,7 @@ services:
 
   # Client demo
   ml-client:
-    image: duynguyenngoc/mmip-client:0.0.1
+    image: duynguyenngoc/mmip-client:latest
     environment:
       DOMAIN: localhost
       BE_HOST: ml-api

@@ -63,22 +63,22 @@ services:
     networks:
       - mlnet
 
-  # ml-client:
-  #   build:
-  #     context: ./ml-client
-  #     dockerfile: ./Dockerfile
-  #   environment:
-  #     DOMAIN: localhost
-  #     BE_HOST: ml-api
-  #     BE_PORT: 8081
-  #   container_name: ml-client
-  #   restart: unless-stopped
-  #   ports:
-  #     - 80:80
-  #   command: sh -c "./custom_nginx.sh && nginx -g 'daemon off;'"
-  #   networks:
-  #     - mlnet
-  
+  # Client
+  ml-client:
+    build:
+      context: ./ml-client
+      dockerfile: ./Dockerfile
+    environment:
+      DOMAIN: localhost
+      BE_HOST: ml-api
+      BE_PORT: 8081
+    container_name: ml-client
+    restart: unless-stopped
+    ports:
+      - 80:80
+    command: sh -c "./custom_nginx.sh && nginx -g 'daemon off;'"
+    networks:
+      - mlnet
 
 networks:
   mlnet:
